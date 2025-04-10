@@ -1,0 +1,6 @@
+@StatisticProcessAPI_HostAddress = http://localhost:5231
+
+GET {{StatisticProcessAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
