@@ -1,9 +1,4 @@
 ﻿using StatisticProcess.Domain.Entitys;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace StatisticProcess.Domain.Interfaces
 {
@@ -14,5 +9,6 @@ namespace StatisticProcess.Domain.Interfaces
         public Task<MeasurementData> InsertOneAsync(MeasurementData measurementData);
         public Task<MeasurementData> UpdateOneAsync(MeasurementData measurementData);
         public Task DeleteOneAsync(MeasurementData measurementData);
+        public Task<List<MeasurementData>> GetByDevice(string deviceCode, int sampleLenght);
     }
 }

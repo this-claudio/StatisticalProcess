@@ -12,8 +12,8 @@ using StatisticalProcess.Infrastructure.EntityFramework.Context;
 namespace StatisticalProcess.Infrastructure.Migrations
 {
     [DbContext(typeof(EFContext))]
-    [Migration("20250324225919_Initial")]
-    partial class Initial
+    [Migration("20250412153129_ImproveValuePrecision4")]
+    partial class ImproveValuePrecision4
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,6 +25,31 @@ namespace StatisticalProcess.Infrastructure.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteData", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bigint");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<long>("Id"));
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<long>("measureId")
+                        .HasColumnType("bigint");
+
+                    b.Property<decimal>("value")
+                        .HasPrecision(18, 4)
+                        .HasColumnType("decimal(18,4)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("measureId");
+
+                    b.ToTable("QuoteData", "StatisticalProcess");
+                });
 
             modelBuilder.Entity("StatisticProcess.Domain.Entitys.MeasurementData", b =>
                 {
@@ -42,21 +67,30 @@ namespace StatisticalProcess.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("MaterialCode")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<DateTime>("MeasurementDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("MeasurementValue")
-                        .HasPrecision(18, 4)
-                        .HasColumnType("decimal(18,4)");
-
                     b.HasKey("Id");
 
+                    b.HasIndex("MeasurementDateTime");
+
                     b.ToTable("MeasurementData", "StatisticalProcess");
+                });
+
+            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteData", b =>
+                {
+                    b.HasOne("StatisticProcess.Domain.Entitys.MeasurementData", "Measure")
+                        .WithMany("Quotes")
+                        .HasForeignKey("measureId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Measure");
+                });
+
+            modelBuilder.Entity("StatisticProcess.Domain.Entitys.MeasurementData", b =>
+                {
+                    b.Navigation("Quotes");
                 });
 #pragma warning restore 612, 618
         }

@@ -1,0 +1,504 @@
+{
+    "measurements": [{
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.3235,
+                    "measureId": 0
+                }, {
+                    "value": 1.4128,
+                    "measureId": 0
+                }, {
+                    "value": 1.6744,
+                    "measureId": 0
+                }, {
+                    "value": 1.4573,
+                    "measureId": 0
+                }, {
+                    "value": 1.6914,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4314,
+                    "measureId": 0
+                }, {
+                    "value": 1.3592,
+                    "measureId": 0
+                }, {
+                    "value": 1.6075,
+                    "measureId": 0
+                }, {
+                    "value": 1.4666,
+                    "measureId": 0
+                }, {
+                    "value": 1.6109,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4284,
+                    "measureId": 0
+                }, {
+                    "value": 1.4871,
+                    "measureId": 0
+                }, {
+                    "value": 1.4932,
+                    "measureId": 0
+                }, {
+                    "value": 1.4324,
+                    "measureId": 0
+                }, {
+                    "value": 1.5674,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5028,
+                    "measureId": 0
+                }, {
+                    "value": 1.6352,
+                    "measureId": 0
+                }, {
+                    "value": 1.3841,
+                    "measureId": 0
+                }, {
+                    "value": 1.2831,
+                    "measureId": 0
+                }, {
+                    "value": 1.5507,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5604,
+                    "measureId": 0
+                }, {
+                    "value": 1.2735,
+                    "measureId": 0
+                }, {
+                    "value": 1.5265,
+                    "measureId": 0
+                }, {
+                    "value": 1.4363,
+                    "measureId": 0
+                }, {
+                    "value": 1.6441,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5955,
+                    "measureId": 0
+                }, {
+                    "value": 1.5451,
+                    "measureId": 0
+                }, {
+                    "value": 1.3574,
+                    "measureId": 0
+                }, {
+                    "value": 1.3281,
+                    "measureId": 0
+                }, {
+                    "value": 1.4198,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.6274,
+                    "measureId": 0
+                }, {
+                    "value": 1.5064,
+                    "measureId": 0
+                }, {
+                    "value": 1.8366,
+                    "measureId": 0
+                }, {
+                    "value": 1.4177,
+                    "measureId": 0
+                }, {
+                    "value": 1.5144,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4190,
+                    "measureId": 0
+                }, {
+                    "value": 1.4303,
+                    "measureId": 0
+                }, {
+                    "value": 1.6637,
+                    "measureId": 0
+                }, {
+                    "value": 1.6067,
+                    "measureId": 0
+                }, {
+                    "value": 1.5519,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.3884,
+                    "measureId": 0
+                }, {
+                    "value": 1.7277,
+                    "measureId": 0
+                }, {
+                    "value": 1.5355,
+                    "measureId": 0
+                }, {
+                    "value": 1.5176,
+                    "measureId": 0
+                }, {
+                    "value": 1.3680,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4039,
+                    "measureId": 0
+                }, {
+                    "value": 1.6697,
+                    "measureId": 0
+                }, {
+                    "value": 1.5089,
+                    "measureId": 0
+                }, {
+                    "value": 1.4627,
+                    "measureId": 0
+                }, {
+                    "value": 1.5200,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4518,
+                    "measureId": 0
+                }, {
+                    "value": 1.7667,
+                    "measureId": 0
+                }, {
+                    "value": 1.4728,
+                    "measureId": 0
+                }, {
+                    "value": 1.5918,
+                    "measureId": 0
+                }, {
+                    "value": 1.4181,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5821,
+                    "measureId": 0
+                }, {
+                    "value": 1.3355,
+                    "measureId": 0
+                }, {
+                    "value": 1.5777,
+                    "measureId": 0
+                }, {
+                    "value": 1.3908,
+                    "measureId": 0
+                }, {
+                    "value": 1.7559,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.2856,
+                    "measureId": 0
+                }, {
+                    "value": 1.4106,
+                    "measureId": 0
+                }, {
+                    "value": 1.4447,
+                    "measureId": 0
+                }, {
+                    "value": 1.6398,
+                    "measureId": 0
+                }, {
+                    "value": 1.1928,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4951,
+                    "measureId": 0
+                }, {
+                    "value": 1.4036,
+                    "measureId": 0
+                }, {
+                    "value": 1.5893,
+                    "measureId": 0
+                }, {
+                    "value": 1.6458,
+                    "measureId": 0
+                }, {
+                    "value": 1.4969,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.3589,
+                    "measureId": 0
+                }, {
+                    "value": 1.2863,
+                    "measureId": 0
+                }, {
+                    "value": 1.5996,
+                    "measureId": 0
+                }, {
+                    "value": 1.2497,
+                    "measureId": 0
+                }, {
+                    "value": 1.5471,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5747,
+                    "measureId": 0
+                }, {
+                    "value": 1.5301,
+                    "measureId": 0
+                }, {
+                    "value": 1.5171,
+                    "measureId": 0
+                }, {
+                    "value": 1.1839,
+                    "measureId": 0
+                }, {
+                    "value": 1.8662,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.3680,
+                    "measureId": 0
+                }, {
+                    "value": 1.7269,
+                    "measureId": 0
+                }, {
+                    "value": 1.3957,
+                    "measureId": 0
+                }, {
+                    "value": 1.5014,
+                    "measureId": 0
+                }, {
+                    "value": 1.4449,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4163,
+                    "measureId": 0
+                }, {
+                    "value": 1.3864,
+                    "measureId": 0
+                }, {
+                    "value": 1.3057,
+                    "measureId": 0
+                }, {
+                    "value": 1.6210,
+                    "measureId": 0
+                }, {
+                    "value": 1.5573,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5796,
+                    "measureId": 0
+                }, {
+                    "value": 1.4185,
+                    "measureId": 0
+                }, {
+                    "value": 1.6541,
+                    "measureId": 0
+                }, {
+                    "value": 1.5116,
+                    "measureId": 0
+                }, {
+                    "value": 1.7247,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.7106,
+                    "measureId": 0
+                }, {
+                    "value": 1.4412,
+                    "measureId": 0
+                }, {
+                    "value": 1.2361,
+                    "measureId": 0
+                }, {
+                    "value": 1.3820,
+                    "measureId": 0
+                }, {
+                    "value": 1.7601,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4371,
+                    "measureId": 0
+                }, {
+                    "value": 1.5051,
+                    "measureId": 0
+                }, {
+                    "value": 1.3485,
+                    "measureId": 0
+                }, {
+                    "value": 1.5670,
+                    "measureId": 0
+                }, {
+                    "value": 1.4880,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.4738,
+                    "measureId": 0
+                }, {
+                    "value": 1.5936,
+                    "measureId": 0
+                }, {
+                    "value": 1.6583,
+                    "measureId": 0
+                }, {
+                    "value": 1.4973,
+                    "measureId": 0
+                }, {
+                    "value": 1.4720,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5917,
+                    "measureId": 0
+                }, {
+                    "value": 1.4333,
+                    "measureId": 0
+                }, {
+                    "value": 1.5551,
+                    "measureId": 0
+                }, {
+                    "value": 1.5295,
+                    "measureId": 0
+                }, {
+                    "value": 1.6866,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.6399,
+                    "measureId": 0
+                }, {
+                    "value": 1.5243,
+                    "measureId": 0
+                }, {
+                    "value": 1.5705,
+                    "measureId": 0
+                }, {
+                    "value": 1.5563,
+                    "measureId": 0
+                }, {
+                    "value": 1.5530,
+                    "measureId": 0
+                }
+            ]
+        }, {
+            "measurementDateTime": "2025-04-12T14:51:25.688Z",
+            "deviceCode": "VisionCamera",
+            "quotes": [{
+                    "value": 1.5797,
+                    "measureId": 0
+                }, {
+                    "value": 1.3663,
+                    "measureId": 0
+                }, {
+                    "value": 1.6240,
+                    "measureId": 0
+                }, {
+                    "value": 1.3732,
+                    "measureId": 0
+                }, {
+                    "value": 1.6887,
+                    "measureId": 0
+                }
+            ]
+        }
+    ]
+}

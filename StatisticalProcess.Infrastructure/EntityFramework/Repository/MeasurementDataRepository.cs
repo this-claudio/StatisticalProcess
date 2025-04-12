@@ -48,5 +48,22 @@ namespace StatisticalProcess.Infrastructure.EntityFramework.Repository
             await _context.SaveChangesAsync();
             _context.Entry(measurementData).State = EntityState.Detached;
         }
+
+        public Task<List<MeasurementData>> GetByDevice(string deviceCode, int sampleLenght)
+        {
+            return DbSet.LoadCollection()
+                .Take(sampleLenght)
+                .Where(x => x.DeviceCode == deviceCode)
+                .OrderBy(x => x.MeasurementDateTime).ToListAsync();
+        }
+    }
+
+    public static class MeasurementDataRepositoryExtensions
+    {
+        public static IQueryable<MeasurementData> LoadCollection(this DbSet<MeasurementData> dbSet)
+        {
+            return dbSet
+                .Include(x => x.Quotes);
+        }
     }
 }

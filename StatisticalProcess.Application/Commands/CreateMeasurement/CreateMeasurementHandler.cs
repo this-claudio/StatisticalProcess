@@ -12,15 +12,13 @@ namespace StatisticalProcess.Application.Commands.CreateMeasurement
             var measure = new MeasurementData()
             {
                 MeasurementDateTime = request.MeasurementDateTime,
-                MeasurementValue = request.MeasurementValue,
-                MaterialCode = request.MaterialCode,
                 DeviceCode = request.DeviceCode
             };
 
             await measurementDataRepository.InsertOneAsync(measure);
 
             return new ResponseStandard<MeasurementData>(measure)
-                .SetSuccess().AddMessage("Measurement data created successfully");
+                .SetSuccess(true).AddMessage("Measurement data created successfully");
         }
     }
 }

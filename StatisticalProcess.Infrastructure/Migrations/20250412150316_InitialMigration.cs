@@ -1,17 +1,37 @@
-﻿using Microsoft.EntityFrameworkCore.Migrations;
+﻿using System;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
 namespace StatisticalProcess.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class AddQuotesEntity : Migration
+    public partial class InitialMigration : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "StatisticalProcess");
+
             migrationBuilder.CreateTable(
-                name: "QuoteDate",
+                name: "MeasurementData",
+                schema: "StatisticalProcess",
+                columns: table => new
+                {
+                    Id = table.Column<long>(type: "bigint", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    MeasurementDateTime = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    DeviceCode = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
+                    IsDeleted = table.Column<bool>(type: "bit", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_MeasurementData", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "QuoteData",
                 schema: "StatisticalProcess",
                 columns: table => new
                 {
@@ -23,9 +43,9 @@ namespace StatisticalProcess.Infrastructure.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_QuoteDate", x => x.Id);
+                    table.PrimaryKey("PK_QuoteData", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_QuoteDate_MeasurementData_measureId",
+                        name: "FK_QuoteData_MeasurementData_measureId",
                         column: x => x.measureId,
                         principalSchema: "StatisticalProcess",
                         principalTable: "MeasurementData",
@@ -34,9 +54,9 @@ namespace StatisticalProcess.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_QuoteDate_measureId",
+                name: "IX_QuoteData_measureId",
                 schema: "StatisticalProcess",
-                table: "QuoteDate",
+                table: "QuoteData",
                 column: "measureId");
         }
 
@@ -44,7 +64,11 @@ namespace StatisticalProcess.Infrastructure.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "QuoteDate",
+                name: "QuoteData",
+                schema: "StatisticalProcess");
+
+            migrationBuilder.DropTable(
+                name: "MeasurementData",
                 schema: "StatisticalProcess");
         }
     }

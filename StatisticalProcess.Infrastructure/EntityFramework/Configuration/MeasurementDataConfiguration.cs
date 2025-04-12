@@ -1,10 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using StatisticProcess.Domain.Entitys;
 
 namespace StatisticalProcess.Infrastructure.EntityFramework.Configuration
@@ -13,20 +8,14 @@ namespace StatisticalProcess.Infrastructure.EntityFramework.Configuration
     {
         public void Configure(EntityTypeBuilder<MeasurementData> builder)
         {
-            
-            builder.HasKey(u => u.Id); 
+
+            builder.HasKey(u => u.Id);
+
+            builder.HasIndex(u => u.MeasurementDateTime);
 
             builder.Property(u => u.DeviceCode)
                 .IsRequired()
                 .HasMaxLength(100);
-
-            builder.Property(u => u.MaterialCode)
-                .IsRequired()
-                .HasMaxLength(100);
-
-            builder.Property(u => u.MeasurementValue)
-                .HasPrecision(18, 4);
-
         }
     }
 }

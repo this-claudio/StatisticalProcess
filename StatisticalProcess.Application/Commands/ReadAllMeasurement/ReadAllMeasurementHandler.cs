@@ -12,7 +12,7 @@ namespace StatisticalProcess.Application.Commands.CreateMeasurement
             var response = await measurementDataRepository.GetAllAsync();
 
             return new ResponseStandard<List<MeasurementData>>(response)
-                .SetSuccess();
+                .SetSuccess(true);
         }
     }
 }

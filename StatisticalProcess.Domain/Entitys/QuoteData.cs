@@ -2,14 +2,14 @@
 
 namespace StatisticProcess.Domain.Entities
 {
-    public class QuoteDate : BaseEntity
+    public class QuoteData : BaseEntity
     {
-        public QuoteDate(decimal value)
+        public QuoteData(decimal value)
         {
             Value = value;
         }
 
-        public QuoteDate() { }
+        public QuoteData() { }
 
         private decimal Value { get; set; }
         private long MeasureId { get; set; }

@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace StatisticalProcess.Domain.Models
+﻿namespace StatisticalProcess.Domain.Models
 {
     public static class ResponseStandardExtension
     {
-        public static ResponseStandard<TModel> SetSuccess<TModel>(this ResponseStandard<TModel> response)
+        public static ResponseStandard<TModel> SetSuccess<TModel>(this ResponseStandard<TModel> response, bool success)
         {
-            response.Success = true;
+            response.Success = success;
             return response;
         }
 
@@ -26,7 +20,7 @@ namespace StatisticalProcess.Domain.Models
             return response;
         }
 
-        public static ResponseStandard<TModel> SetData<TModel>(this ResponseStandard<TModel> response, TModel data)
+        public static ResponseStandard<TModel> AddData<TModel>(this ResponseStandard<TModel> response, TModel data)
         {
             response.Data = data;
             return response;

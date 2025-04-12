@@ -23,7 +23,7 @@ namespace StatisticalProcess.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteDate", b =>
+            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteData", b =>
                 {
                     b.Property<long>("Id")
                         .ValueGeneratedOnAdd()
@@ -38,13 +38,14 @@ namespace StatisticalProcess.Infrastructure.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<decimal>("value")
-                        .HasColumnType("decimal(18,2)");
+                        .HasPrecision(18, 4)
+                        .HasColumnType("decimal(18,4)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("measureId");
 
-                    b.ToTable("QuoteDate", "StatisticalProcess");
+                    b.ToTable("QuoteData", "StatisticalProcess");
                 });
 
             modelBuilder.Entity("StatisticProcess.Domain.Entitys.MeasurementData", b =>
@@ -63,24 +64,17 @@ namespace StatisticalProcess.Infrastructure.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("MaterialCode")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
                     b.Property<DateTime>("MeasurementDateTime")
                         .HasColumnType("datetime2");
 
-                    b.Property<decimal>("MeasurementValue")
-                        .HasPrecision(18, 4)
-                        .HasColumnType("decimal(18,4)");
-
                     b.HasKey("Id");
+
+                    b.HasIndex("MeasurementDateTime");
 
                     b.ToTable("MeasurementData", "StatisticalProcess");
                 });
 
-            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteDate", b =>
+            modelBuilder.Entity("StatisticProcess.Domain.Entities.QuoteData", b =>
                 {
                     b.HasOne("StatisticProcess.Domain.Entitys.MeasurementData", "Measure")
                         .WithMany("Quotes")

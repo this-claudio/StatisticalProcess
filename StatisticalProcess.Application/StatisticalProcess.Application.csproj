@@ -7,10 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Mappers\" />
+    <None Remove="Utils\Dictionaries\CoeficientesDeControle.csv" />
   </ItemGroup>
 
   <ItemGroup>
+    <Content Include="Utils\Dictionaries\CoeficientesDeControle.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="14.0.0" />
     <PackageReference Include="MediatR" Version="11.1.0" />
   </ItemGroup>
 
