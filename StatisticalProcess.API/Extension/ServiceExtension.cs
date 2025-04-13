@@ -5,16 +5,14 @@ using StatisticalProcess.Application.Utils.Contracts;
 using StatisticalProcess.Application.Utils.Dictionaries;
 using StatisticalProcess.Infrastructure.EntityFramework.Context;
 using StatisticalProcess.Infrastructure.EntityFramework.Repository;
-using StatisticProcess.Domain.Constant;
 using StatisticProcess.Domain.Interfaces;
 
 namespace StatisticalProcess.API.Extension
 {
     public static class ServiceExtension
     {
-        public static IServiceCollection ConfigureService(this IServiceCollection service, IConfiguration configuration)
+        public static IServiceCollection ConfigureService(this IServiceCollection service, IConfiguration configuration, ILogger logger)
         {
-            var connectionString = configuration.GetConnectionString(Configuration.CONNECTION);
 
             service.AddControllers();
             service.AddEndpointsApiExplorer();
@@ -27,9 +25,21 @@ namespace StatisticalProcess.API.Extension
 
 
             service.AddDbContext<EFContext>(options =>
-                options.UseSqlServer(connectionString));
+                options.UseSqlServer(DbConnectionHelper.MakeConnection(logger)));
 
             service.AddAutoMapper(typeof(IApplicationMark).Assembly);
+
+            service.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", policy =>
+                {
+                    policy
+                        .AllowAnyOrigin()
+                        .AllowAnyHeader()
+                        .AllowAnyMethod();
+                });
+            });
+
             return service;
         }
     }

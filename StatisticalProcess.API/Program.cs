@@ -2,10 +2,11 @@ using StatisticalProcess.API.Extension;
 
 
 var builder = WebApplication.CreateBuilder(args);
+var logger = builder.Services.BuildServiceProvider().GetRequiredService<ILogger<Program>>();
 
 // Add services to the container.
 
-builder.Services.ConfigureService(builder.Configuration);
+builder.Services.ConfigureService(builder.Configuration, logger);
 
 var app = builder.Build();
 

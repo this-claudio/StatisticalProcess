@@ -7,6 +7,8 @@ namespace StatisticalProcess.API.Extension
     {
         public static void ConfigureApps(WebApplication app)
         {
+            app.UseCors("AllowAll");
+
             using (var scope = app.Services.CreateScope())
             {
                 var dbContext = scope.ServiceProvider.GetRequiredService<EFContext>();
