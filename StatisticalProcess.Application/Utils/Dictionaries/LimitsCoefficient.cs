@@ -12,7 +12,9 @@ namespace StatisticalProcess.Application.Utils.Dictionaries
         public LimitsCoefficient()
         {
 
-            string fileName = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Utils\\Dictionaries\\CoeficientesDeControle.csv");
+            string fileName = Path.Combine(
+                AppDomain.CurrentDomain.BaseDirectory,
+                "Utils", "Dictionaries", "CoeficientesDeControle.csv");
 
             if (!File.Exists(fileName))
             {

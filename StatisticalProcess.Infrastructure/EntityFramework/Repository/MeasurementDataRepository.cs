@@ -54,7 +54,7 @@ namespace StatisticalProcess.Infrastructure.EntityFramework.Repository
             return DbSet.LoadCollection()
                 .Take(sampleLenght)
                 .Where(x => x.DeviceCode == deviceCode)
-                .OrderBy(x => x.MeasurementDateTime).ToListAsync();
+                .OrderByDescending(x => x.MeasurementDateTime).ToListAsync();
         }
     }
 

@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Sequor.QualitySyncData.Application.Commands.InspectionCommands.FindInspectionByMaterial;
 using StatisticalProcess.Application.Commands.CreateMeasurement;
+using StatisticalProcess.Application.Models.Measurement;
 using StatisticalProcess.Application.Models.SPC;
 using StatisticalProcess.Domain.Models;
 using StatisticProcess.Domain.Entitys;
@@ -13,7 +14,7 @@ namespace StatisticalProcess.API.Controllers
     public class MeasurementDataController(IMediator mediator)
     {
         [HttpPost("[action]")]
-        public async Task<ResponseStandard<MeasurementData>> CreateAsync([FromBody] CreateMeasurementRequest measurementData)
+        public async Task<ResponseStandard<MeasurementDataModel>> CreateAsync([FromBody] CreateMeasurementRequest measurementData)
         {
             return await mediator.Send(measurementData);
         }

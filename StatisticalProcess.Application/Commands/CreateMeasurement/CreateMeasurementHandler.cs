@@ -1,23 +1,23 @@
-﻿using MediatR;
+﻿using AutoMapper;
+using MediatR;
+using StatisticalProcess.Application.Models.Measurement;
 using StatisticalProcess.Domain.Models;
 using StatisticProcess.Domain.Entitys;
 using StatisticProcess.Domain.Interfaces;
 
 namespace StatisticalProcess.Application.Commands.CreateMeasurement
 {
-    public class CreateMeasurementHandler(IMeasurementDataRepository measurementDataRepository) : IRequestHandler<CreateMeasurementRequest, ResponseStandard<MeasurementData>>
+    public class CreateMeasurementHandler(IMapper mapper, IMeasurementDataRepository measurementDataRepository) : IRequestHandler<CreateMeasurementRequest, ResponseStandard<MeasurementDataModel>>
     {
-        public async Task<ResponseStandard<MeasurementData>> Handle(CreateMeasurementRequest request, CancellationToken cancellationToken)
+        public async Task<ResponseStandard<MeasurementDataModel>> Handle(CreateMeasurementRequest request, CancellationToken cancellationToken)
         {
-            var measure = new MeasurementData()
-            {
-                MeasurementDateTime = request.MeasurementDateTime,
-                DeviceCode = request.DeviceCode
-            };
+            var measure = mapper.Map<MeasurementData>(request);
 
-            await measurementDataRepository.InsertOneAsync(measure);
+            var persistence = await measurementDataRepository.InsertOneAsync(measure);
 
-            return new ResponseStandard<MeasurementData>(measure)
+            var response = mapper.Map<MeasurementDataModel>(persistence);
+
+            return new ResponseStandard<MeasurementDataModel>(response)
                 .SetSuccess(true).AddMessage("Measurement data created successfully");
         }
     }
